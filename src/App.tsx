@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from '@material-ui/core';
+import PokemonList from './components/pokemon-list/PokemonList';
+import { Alert } from '@material-ui/lab';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Grid container justify="center" alignItems="center" spacing={3}>
+        <Header />
+        <PokemonList />
+      </Grid>
   );
 }
+
+const Header = () => (
+  <Grid item xs={12}>
+    <Alert severity="info">
+      Listagem de Pokemons
+    </Alert>
+  </Grid>
+)
 
 export default App;
