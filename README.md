@@ -49,7 +49,7 @@ $ npm install
 
 # Execute a aplicação em modo de desenvolvimento
 $ npm start
-
+```
 
 ### Tecnologias
 
