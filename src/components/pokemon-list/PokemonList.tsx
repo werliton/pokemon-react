@@ -19,13 +19,13 @@ const PokemonListItem = () => {
     },[dispatch])
 
   return (
-    <>
+    <div id="container">
     {
       isLoading ? <Skeleton variant="rect" width={210} height={118} />
       :
       results?.map((pokemon: any) => <PokemonCard {...pokemon} key={pokemon.url} />)
     }
-    </>
+    </div>
   )
 }
 
